@@ -68,8 +68,8 @@ public class OrderService {
 
     public void printData() throws SQLException {
         log.info("---------------------------- Print Order Data -----------------------");
-        for (Object each : orderRepository.selectAll()) {
-            System.out.println(each);
+        for (Order each : orderRepository.selectAll()) {
+            log.info("order:{}", each);
         }
     }
 }
